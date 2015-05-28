@@ -25,7 +25,7 @@ namespace Checkpoints
     static MapCheckpoints mapCheckpoints =
         boost::assign::map_list_of
             ( 0, hashGenesisBlock )
-            (500, CheckPointBlock1)
+            (125, CheckPointBlock1)
 
 
     ;
@@ -350,7 +350,7 @@ namespace Checkpoints
 }
 
 // global: sync-checkpoint master key
-const std::string CSyncCheckpoint::strMasterPubKey = "04bddbb033bd9bdfeb51059a3ad2fddbfd528b65c9e69897e786a815d4654ee5de57dabda837021a71ba9e935dcd49cd9bc550373e50c3f394eb87d17446e1f0fb";
+const std::string CSyncCheckpoint::strMasterPubKey = "04af076a13410410307f7ea153e2e73487efe79cab72f8064c738cab37a9052ecab0ffadd4f38a9eb4789f3facae9c91d5219b7e6c436a0a62dc0654084ad8c575";
 
 std::string CSyncCheckpoint::strMasterPrivKey = "";
 

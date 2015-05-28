@@ -5,9 +5,9 @@
 
 // Genesis block 0 hash
 
-static const uint256 hashGenesisBlock("000003e0c1e29a31c3332f93ecff92528cf059d5c17a351fb4b8f7e70b8e3932");
-static const uint256 hashGenesisBlockTestNet("000003e0c1e29a31c3332f93ecff92528cf059d5c17a351fb4b8f7e70b8e3932");
-static const uint256 CheckPointBlock1("000000020fd36c6f0d8e635ba14c9cf4678b687b65af8df185e6271c36bf74b9");
+static const uint256 hashGenesisBlock("0000017cecc986be2b441613b9bb254e1da6a79ca9772b6faab5562fc67b14fa");
+static const uint256 hashGenesisBlockTestNet("0000017cecc986be2b441613b9bb254e1da6a79ca9772b6faab5562fc67b14fa");
+static const uint256 CheckPointBlock1("00000001d2a2ce5daddc7f416c02ad58d80f9e19239ba9c208aedb17e0d3e975");
 
 // TODO: Move Kernel checksum in here
 

@@ -2040,7 +2040,7 @@ bool CBlock::AddToBlockIndex(unsigned int nFile, unsigned int nBlockPos, const u
     pindexNew->SetStakeModifier(nStakeModifier, fGeneratedStakeModifier);
     pindexNew->nStakeModifierChecksum = GetStakeModifierChecksum(pindexNew);
 
-
+//@@@here
     if (!CheckStakeModifierCheckpoints(pindexNew->nHeight, pindexNew->nStakeModifierChecksum))
         return error("AddToBlockIndex() : Rejected by stake modifier checkpoint height=%d, modifier=0x%016"PRIx64, pindexNew->nHeight, nStakeModifier);
 
@@ -2567,9 +2567,9 @@ bool LoadBlockIndex(bool fAllowNew)
         if (!fAllowNew)
             return false;
 
-        const char* pszTimestamp = "Biker gang shootout kills 9 outside Waco, Texas, restaurant";
+        const char* pszTimestamp = "Sepp Blatter denies scandal responsibility...lol what a joke!";
         CTransaction txNew;
-        txNew.nTime = 1431977174;
+        txNew.nTime = 1432845927;
         txNew.vin.resize(1);
         txNew.vout.resize(1);
         txNew.vin[0].scriptSig = CScript() << 0 << CBigNum(42) << vector<unsigned char>((const unsigned char*)pszTimestamp, (const unsigned char*)pszTimestamp + strlen(pszTimestamp));
@@ -2579,12 +2579,12 @@ bool LoadBlockIndex(bool fAllowNew)
         block.hashPrevBlock = 0;
         block.hashMerkleRoot = block.BuildMerkleTree();
         block.nVersion = 1;
-        block.nTime    = 1431977174;
+        block.nTime    = 1432845927;
         block.nBits    = bnProofOfWorkLimit.GetCompact();
-        block.nNonce   = 422868;
+        block.nNonce   = 2876;
         if(fTestNet)
         {
-            block.nNonce   = 422868;
+            block.nNonce   = 2876;
         }
         if (true  && (block.GetHash() != hashGenesisBlock)) {
 
@@ -2608,7 +2608,7 @@ bool LoadBlockIndex(bool fAllowNew)
         printf("block.nNonce = %u \n", block.nNonce);
 
         //// debug print
-        assert(block.hashMerkleRoot == uint256("ce97c1bc71b00870b873a1592f5d3ff2a274a87bd373f1f8ba40581ee3ec839a"));
+        assert(block.hashMerkleRoot == uint256("a32c77b192a51a087b7dec59d5a432fce40008791fd2ad3e4445cb94fc5647e5"));
         block.print();
         assert(block.GetHash() == (!fTestNet ? hashGenesisBlock : hashGenesisBlockTestNet));
         assert(block.CheckBlock());
