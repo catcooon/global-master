@@ -28,6 +28,7 @@ class CRequestTracker;
 class CNode;
 
 static const int LAST_POW_BLOCK = 40000;
+static const int NEW_POW_BLOCK = 182005;
 static const int Retarget_V2_Start = 182500;
 static const int Retarget_V2_Start_TestNet = 182500;
 static const unsigned int MAX_BLOCK_SIZE = 1000000;
