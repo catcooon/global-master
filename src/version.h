@@ -31,7 +31,7 @@ static const int DATABASE_VERSION = 70508;
 //
 
 static const int PROTOCOL_VERSION = 80002;
-
+// all previous client verisons will be invalid
 static const int MIN_PROTO_VERSION = 80002;
 
 // nTime field added to CAddress, starting with this version;
