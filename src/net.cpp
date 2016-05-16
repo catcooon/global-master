@@ -1140,7 +1140,11 @@ void MapPort()
 static const char *strDNSSeed[][2] = {
     {"global-node1.mooo.com", "global-node1.mooo.com"},
     {"global-node2.mooo.com", "global-node2.mooo.com"},
-	
+    {"global-node3.mooo.com", "global-node3.mooo.com"},	
+    {"global-node4.mooo.com", "global-node4.mooo.com"},
+    {"global-node5.mooo.com", "global-node5.mooo.com"},	
+    {"global-node6.mooo.com", "global-node6.mooo.com"},
+    {"global-node7.mooo.com", "global-node7.mooo.com"},
 };
 
 void ThreadDNSAddressSeed(void* parg)
