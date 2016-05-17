@@ -972,29 +972,164 @@ uint256 WantedByOrphan(const CBlock* pblockOrphan)
 // miner's coin base reward
 int64_t GetProofOfWorkReward(int64_t nFees)
 {
+
+//    Blocks 183000 - 183800 = 2000 GLOBE per block
+//    Blocks 183801 - 184440 = 1000 GLOBE per block
+//    Blocks 184441 - 188040 = 500 GLOBE per block
+//    Blocks 188041 - 192360 = 250 GLOBE per block
+//    Blocks 192361 - 196680 = 125 GLOBE per block
+//    Blocks 196681 - 201000 = 50 GLOBE per block
+//    Blocks 201001 - 339240 = 25 GLOBE per block
+//    Blocks 339241 - 343560 = 50 GLOBE per block
+//    Blocks 343561 - 347880 = 250 GLOBE per block
+//    Blocks 347881 - 352200 = 500 GLOBE per block
+//    Blocks 352201 - 356520 = 250 GLOBE per block
+//    Blocks 356521 - 360840 = 125 GLOBE per block
+//    Blocks 360841 - 365160 = 50 GLOBE per block
+//    Blocks 365161 - 890760 = 25 GLOBE per block
+//    Blocks 890761 - 1416360 = 12.5 GLOBE per block
+//    Blocks 1416361 - 1941960 = 6 GLOBE per block
+//    Blocks 1941961 - Forever = 5 GLOBE per block
+
     if (pindexBest->nHeight == 1){
         int64_t nSubsidy = 90000000 * COIN;
+        return nSubsidy + nFees;
+    } else if (pindexBest >= 183000 && pindexBest < 183800) {
+        int64_t nSubsidy = 2000 * COIN;
+        return nSubsidy + nFees;
+    } else if (pindexBest >= 183801 && pindexBest < 184440) {
+        int64_t nSubsidy = 1000 * COIN;
+        return nSubsidy + nFees;
+    } else if (pindexBest >= 184441 && pindexBest < 188040) {
+        int64_t nSubsidy = 500 * COIN;
+        return nSubsidy + nFees;
+    } else if (pindexBest >= 188041 && pindexBest < 192360) {
+        int64_t nSubsidy = 250 * COIN;
+        return nSubsidy + nFees;
+    } else if (pindexBest >= 196681 && pindexBest < 196680) {
+        int64_t nSubsidy = 125 * COIN;
+        return nSubsidy + nFees;
+    } else if (pindexBest >= 196681 && pindexBest < 201000) {
+        int64_t nSubsidy = 50 * COIN;
+        return nSubsidy + nFees;
+    } else if (pindexBest >= 201001 && pindexBest < 339240) {
+        int64_t nSubsidy = 25 * COIN;
+        return nSubsidy + nFees;
+    } else if (pindexBest >= 339241 && pindexBest < 343560) {
+        int64_t nSubsidy = 50 * COIN;
+        return nSubsidy + nFees;
+    } else if (pindexBest >= 343561 && pindexBest < 347880) {
+        int64_t nSubsidy = 250 * COIN;
+        return nSubsidy + nFees;
+    } else if (pindexBest >= 347881 && pindexBest < 352200) {
+        int64_t nSubsidy = 500 * COIN;
+        return nSubsidy + nFees;
+    } else if (pindexBest >= 352201 && pindexBest < 356520) {
+        int64_t nSubsidy = 250 * COIN;
+        return nSubsidy + nFees;
+    } else if (pindexBest >= 356521 && pindexBest < 360840) {
+        int64_t nSubsidy = 125 * COIN;
+        return nSubsidy + nFees;
+    } else if (pindexBest >= 360841 && pindexBest < 365160) {
+        int64_t nSubsidy = 50 * COIN;
+        return nSubsidy + nFees;
+    } else if (pindexBest >= 365161 && pindexBest < 890760) {
+        int64_t nSubsidy = 25 * COIN;
+        return nSubsidy + nFees;
+    } else if (pindexBest >= 890761 && pindexBest < 1416360) {
+        int64_t nSubsidy = 12.5 * COIN;
+        return nSubsidy + nFees;
+    } else if (pindexBest >= 1416361 && pindexBest < 1941960) {
+        int64_t nSubsidy = 6 * COIN;
+        return nSubsidy + nFees;
+    } else if (pindexBest >= 1941960 && pindexBest < 999999999) {
+        int64_t nSubsidy = 5 * COIN;
         return nSubsidy + nFees;
     } else {
         int64_t nSubsidy = 0 * COIN;
         return nSubsidy + nFees;
     }
-
 }
 
-// miner's coin stake reward based on coin age spent (coin-days)
+// miner's coin stake reward
 int64_t GetProofOfStakeReward(int64_t nCoinAge, int64_t nFees)
 {
     int64_t nRewardCoinYear;
     nRewardCoinYear = MAX_MINT_PROOF_OF_STAKE;
 
-    int64_t nSubsidy = nCoinAge * nRewardCoinYear / 365;
+//    Blocks 183000 - 183800 = 1000 GLOBE per block
+//    Blocks 183801 - 184440 = 1000 GLOBE per block
+//    Blocks 184441 - 188040 = 500 GLOBE per block
+//    Blocks 188041 - 192360 = 375 GLOBE per block
+//    Blocks 192361 - 196680 = 360 GLOBE per block
+//    Blocks 196681 - 201000 = 250 GLOBE per block
+//    Blocks 201001 - 339240 = 25 GLOBE per block
+//    Blocks 339241 - 343560 = 400 GLOBE per block
+//    Blocks 343561 - 347880 = 1000 GLOBE per block
+//    Blocks 347881 - 352200 = 550 GLOBE per block
+//    Blocks 352201 - 356520 = 360 GLOBE per block
+//    Blocks 356521 - 360840 = 200 GLOBE per block
+//    Blocks 360841 - 365160 = 100 GLOBE per block
+//    Blocks 365161 - 890760 = 25 GLOBE per block
+//    Blocks 890761 - 1416360 = 12.5 GLOBE per block
+//    Blocks 1416361 - 1941960 = 6 GLOBE per block
+//    Blocks 1941961 - Forever = 5 GLOBE per block
 
-
-    if (fDebug && GetBoolArg("-printcreation"))
-        printf("GetProofOfStakeReward(): create=%s nCoinAge=%"PRId64"\n", FormatMoney(nSubsidy).c_str(), nCoinAge);
-
-    return nSubsidy + nFees;
+    if (pindexBest >= 183000 && pindexBest < 183800) {
+        int64_t nSubsidy = 1000 * COIN;
+        return nSubsidy + nFees;
+    } else if (pindexBest >= 183801 && pindexBest < 184440) {
+        int64_t nSubsidy = 1000 * COIN;
+        return nSubsidy + nFees;
+    } else if (pindexBest >= 184441 && pindexBest < 188040) {
+        int64_t nSubsidy = 500 * COIN;
+        return nSubsidy + nFees;
+    } else if (pindexBest >= 188041 && pindexBest < 192360) {
+        int64_t nSubsidy = 375 * COIN;
+        return nSubsidy + nFees;
+    } else if (pindexBest >= 196681 && pindexBest < 196680) {
+        int64_t nSubsidy = 360 * COIN;
+        return nSubsidy + nFees;
+    } else if (pindexBest >= 196681 && pindexBest < 201000) {
+        int64_t nSubsidy = 250 * COIN;
+        return nSubsidy + nFees;
+    } else if (pindexBest >= 201001 && pindexBest < 339240) {
+        int64_t nSubsidy = 25 * COIN;
+        return nSubsidy + nFees;
+    } else if (pindexBest >= 339241 && pindexBest < 343560) {
+        int64_t nSubsidy = 400 * COIN;
+        return nSubsidy + nFees;
+    } else if (pindexBest >= 343561 && pindexBest < 347880) {
+        int64_t nSubsidy = 1000 * COIN;
+        return nSubsidy + nFees;
+    } else if (pindexBest >= 347881 && pindexBest < 352200) {
+        int64_t nSubsidy = 550 * COIN;
+        return nSubsidy + nFees;
+    } else if (pindexBest >= 352201 && pindexBest < 356520) {
+        int64_t nSubsidy = 360 * COIN;
+        return nSubsidy + nFees;
+    } else if (pindexBest >= 356521 && pindexBest < 360840) {
+        int64_t nSubsidy = 200 * COIN;
+        return nSubsidy + nFees;
+    } else if (pindexBest >= 360841 && pindexBest < 365160) {
+        int64_t nSubsidy = 100 * COIN;
+        return nSubsidy + nFees;
+    } else if (pindexBest >= 365161 && pindexBest < 890760) {
+        int64_t nSubsidy = 25 * COIN;
+        return nSubsidy + nFees;
+    } else if (pindexBest >= 890761 && pindexBest < 1416360) {
+        int64_t nSubsidy = 12.5 * COIN;
+        return nSubsidy + nFees;
+    } else if (pindexBest >= 1416361 && pindexBest < 1941960) {
+        int64_t nSubsidy = 6 * COIN;
+        return nSubsidy + nFees;
+    } else if (pindexBest >= 1941960 && pindexBest < 999999999) {
+        int64_t nSubsidy = 5 * COIN;
+        return nSubsidy + nFees;
+    } else {
+        int64_t nSubsidy = nCoinAge * nRewardCoinYear / 365;
+        return nSubsidy + nFees;
+    }
 }
 
 
