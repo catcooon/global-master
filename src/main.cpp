@@ -994,55 +994,55 @@ int64_t GetProofOfWorkReward(int64_t nFees)
     if (pindexBest->nHeight == 1){
         int64_t nSubsidy = 90000000 * COIN;
         return nSubsidy + nFees;
-    } else if (pindexBest >= 183000 && pindexBest < 183800) {
+    } else if (pindexBest->nHeight >= 183000 && pindexBest->nHeight < 183800) {
         int64_t nSubsidy = 2000 * COIN;
         return nSubsidy + nFees;
-    } else if (pindexBest >= 183801 && pindexBest < 184440) {
+    } else if (pindexBest->nHeight >= 183801 && pindexBest->nHeight < 184440) {
         int64_t nSubsidy = 1000 * COIN;
         return nSubsidy + nFees;
-    } else if (pindexBest >= 184441 && pindexBest < 188040) {
+    } else if (pindexBest->nHeight >= 184441 && pindexBest->nHeight < 188040) {
         int64_t nSubsidy = 500 * COIN;
         return nSubsidy + nFees;
-    } else if (pindexBest >= 188041 && pindexBest < 192360) {
+    } else if (pindexBest->nHeight >= 188041 && pindexBest->nHeight < 192360) {
         int64_t nSubsidy = 250 * COIN;
         return nSubsidy + nFees;
-    } else if (pindexBest >= 196681 && pindexBest < 196680) {
+    } else if (pindexBest->nHeight >= 196681 && pindexBest->nHeight < 196680) {
         int64_t nSubsidy = 125 * COIN;
         return nSubsidy + nFees;
-    } else if (pindexBest >= 196681 && pindexBest < 201000) {
+    } else if (pindexBest->nHeight >= 196681 && pindexBest->nHeight < 201000) {
         int64_t nSubsidy = 50 * COIN;
         return nSubsidy + nFees;
-    } else if (pindexBest >= 201001 && pindexBest < 339240) {
+    } else if (pindexBest->nHeight >= 201001 && pindexBest->nHeight < 339240) {
         int64_t nSubsidy = 25 * COIN;
         return nSubsidy + nFees;
-    } else if (pindexBest >= 339241 && pindexBest < 343560) {
+    } else if (pindexBest->nHeight >= 339241 && pindexBest->nHeight < 343560) {
         int64_t nSubsidy = 50 * COIN;
         return nSubsidy + nFees;
-    } else if (pindexBest >= 343561 && pindexBest < 347880) {
+    } else if (pindexBest->nHeight >= 343561 && pindexBest->nHeight < 347880) {
         int64_t nSubsidy = 250 * COIN;
         return nSubsidy + nFees;
-    } else if (pindexBest >= 347881 && pindexBest < 352200) {
+    } else if (pindexBest->nHeight >= 347881 && pindexBest->nHeight < 352200) {
         int64_t nSubsidy = 500 * COIN;
         return nSubsidy + nFees;
-    } else if (pindexBest >= 352201 && pindexBest < 356520) {
+    } else if (pindexBest->nHeight >= 352201 && pindexBest->nHeight < 356520) {
         int64_t nSubsidy = 250 * COIN;
         return nSubsidy + nFees;
-    } else if (pindexBest >= 356521 && pindexBest < 360840) {
+    } else if (pindexBest->nHeight >= 356521 && pindexBest->nHeight < 360840) {
         int64_t nSubsidy = 125 * COIN;
         return nSubsidy + nFees;
-    } else if (pindexBest >= 360841 && pindexBest < 365160) {
+    } else if (pindexBest->nHeight >= 360841 && pindexBest->nHeight < 365160) {
         int64_t nSubsidy = 50 * COIN;
         return nSubsidy + nFees;
-    } else if (pindexBest >= 365161 && pindexBest < 890760) {
+    } else if (pindexBest->nHeight >= 365161 && pindexBest->nHeight < 890760) {
         int64_t nSubsidy = 25 * COIN;
         return nSubsidy + nFees;
-    } else if (pindexBest >= 890761 && pindexBest < 1416360) {
+    } else if (pindexBest->nHeight >= 890761 && pindexBest->nHeight < 1416360) {
         int64_t nSubsidy = 12.5 * COIN;
         return nSubsidy + nFees;
-    } else if (pindexBest >= 1416361 && pindexBest < 1941960) {
+    } else if (pindexBest->nHeight >= 1416361 && pindexBest->nHeight < 1941960) {
         int64_t nSubsidy = 6 * COIN;
         return nSubsidy + nFees;
-    } else if (pindexBest >= 1941960 && pindexBest < 999999999) {
+    } else if (pindexBest->nHeight >= 1941960 && pindexBest->nHeight < 999999999) {
         int64_t nSubsidy = 5 * COIN;
         return nSubsidy + nFees;
     } else {
@@ -1075,55 +1075,55 @@ int64_t GetProofOfStakeReward(int64_t nCoinAge, int64_t nFees)
 //    Blocks 1416361 - 1941960 = 6 GLOBE per block
 //    Blocks 1941961 - Forever = 5 GLOBE per block
 
-    if (pindexBest >= 183000 && pindexBest < 183800) {
+    if (pindexBest->nHeight >= 183000 && pindexBest->nHeight < 183800) {
         int64_t nSubsidy = 1000 * COIN;
         return nSubsidy + nFees;
-    } else if (pindexBest >= 183801 && pindexBest < 184440) {
+    } else if (pindexBest->nHeight >= 183801 && pindexBest->nHeight < 184440) {
         int64_t nSubsidy = 1000 * COIN;
         return nSubsidy + nFees;
-    } else if (pindexBest >= 184441 && pindexBest < 188040) {
+    } else if (pindexBest->nHeight >= 184441 && pindexBest->nHeight < 188040) {
         int64_t nSubsidy = 500 * COIN;
         return nSubsidy + nFees;
-    } else if (pindexBest >= 188041 && pindexBest < 192360) {
+    } else if (pindexBest->nHeight >= 188041 && pindexBest->nHeight < 192360) {
         int64_t nSubsidy = 375 * COIN;
         return nSubsidy + nFees;
-    } else if (pindexBest >= 196681 && pindexBest < 196680) {
+    } else if (pindexBest->nHeight >= 196681 && pindexBest->nHeight < 196680) {
         int64_t nSubsidy = 360 * COIN;
         return nSubsidy + nFees;
-    } else if (pindexBest >= 196681 && pindexBest < 201000) {
+    } else if (pindexBest->nHeight >= 196681 && pindexBest->nHeight < 201000) {
         int64_t nSubsidy = 250 * COIN;
         return nSubsidy + nFees;
-    } else if (pindexBest >= 201001 && pindexBest < 339240) {
+    } else if (pindexBest->nHeight >= 201001 && pindexBest->nHeight < 339240) {
         int64_t nSubsidy = 25 * COIN;
         return nSubsidy + nFees;
-    } else if (pindexBest >= 339241 && pindexBest < 343560) {
+    } else if (pindexBest->nHeight >= 339241 && pindexBest->nHeight < 343560) {
         int64_t nSubsidy = 400 * COIN;
         return nSubsidy + nFees;
-    } else if (pindexBest >= 343561 && pindexBest < 347880) {
+    } else if (pindexBest->nHeight >= 343561 && pindexBest->nHeight < 347880) {
         int64_t nSubsidy = 1000 * COIN;
         return nSubsidy + nFees;
-    } else if (pindexBest >= 347881 && pindexBest < 352200) {
+    } else if (pindexBest->nHeight >= 347881 && pindexBest->nHeight < 352200) {
         int64_t nSubsidy = 550 * COIN;
         return nSubsidy + nFees;
-    } else if (pindexBest >= 352201 && pindexBest < 356520) {
+    } else if (pindexBest->nHeight >= 352201 && pindexBest->nHeight < 356520) {
         int64_t nSubsidy = 360 * COIN;
         return nSubsidy + nFees;
-    } else if (pindexBest >= 356521 && pindexBest < 360840) {
+    } else if (pindexBest->nHeight >= 356521 && pindexBest->nHeight < 360840) {
         int64_t nSubsidy = 200 * COIN;
         return nSubsidy + nFees;
-    } else if (pindexBest >= 360841 && pindexBest < 365160) {
+    } else if (pindexBest->nHeight >= 360841 && pindexBest->nHeight < 365160) {
         int64_t nSubsidy = 100 * COIN;
         return nSubsidy + nFees;
-    } else if (pindexBest >= 365161 && pindexBest < 890760) {
+    } else if (pindexBest->nHeight >= 365161 && pindexBest->nHeight < 890760) {
         int64_t nSubsidy = 25 * COIN;
         return nSubsidy + nFees;
-    } else if (pindexBest >= 890761 && pindexBest < 1416360) {
+    } else if (pindexBest->nHeight >= 890761 && pindexBest->nHeight < 1416360) {
         int64_t nSubsidy = 12.5 * COIN;
         return nSubsidy + nFees;
-    } else if (pindexBest >= 1416361 && pindexBest < 1941960) {
+    } else if (pindexBest->nHeight >= 1416361 && pindexBest->nHeight < 1941960) {
         int64_t nSubsidy = 6 * COIN;
         return nSubsidy + nFees;
-    } else if (pindexBest >= 1941960 && pindexBest < 999999999) {
+    } else if (pindexBest->nHeight >= 1941960 && pindexBest->nHeight < 999999999) {
         int64_t nSubsidy = 5 * COIN;
         return nSubsidy + nFees;
     } else {
